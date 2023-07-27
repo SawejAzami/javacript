@@ -33,4 +33,5 @@ console.log(str.includes("css"));// false
 
 let name2="shyam";
 let score=50;
-console.log('hello my name is ${name2} and I have scored ${score} in my exam');
+console.log(`hello my name is ${name2} and I have scored ${score} in my exam`);
+//hello my name is shyam and I have scored 50 in my exam
