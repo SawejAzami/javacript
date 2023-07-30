@@ -90,3 +90,54 @@ console.log(obj4);  //{ '1': 'a', '2': 'b', '3': 'a', '4': 'b' }
 const obj5= Object.assign({},obj1,obj2)  // {} it become the target and all are source
 console.log(obj5);   //{ '1': 'a', '2': 'b', '3': 'a', '4': 'b' }
 
+// you can also combine the object by this method
+
+const obj6={...obj1,...obj2}
+console.log(obj6);  //{ '1': 'a', '2': 'b', '3': 'a', '4': 'b' }
+
+
+const user2=[
+    {
+        id:"1234",
+        email:"h@gmail.com"
+    },
+    {
+        id:"1234",
+        email:"h@gmail.com"
+    },
+    {
+        id:"1234",
+        email:"h@gmail.com"
+    },
+    {
+        id:"1234",
+        email:"h@gmail.com"
+    },
+]
+
+user2[1].email   // it is in array form so you can choose the index and access the the key and value
+
+
+console.log(Object.keys(tinder)); //   [ 'id', 'name' ] you can get all keys
+// its datatype is Array so can can use it as a array
+
+console.log(Object.values(tinder));//  [ '123abc', 'sammy' ] you can get all values
+
+console.log(Object.entries(tinder));   //[ [ 'id', '123abc' ], [ 'name', 'sammy' ] ]
+console.log(tinder.hasOwnProperty('id')); //true   it check whether it has id property
+
+const course={
+    coursename:"js in hindi",
+    price:"999",
+    courseInstructor:"hitesh",
+}
+ // Destructure of the object
+  const {courseInstructor}=course 
+//   const {courseInstructor:instuctor}=course  
+// here you can give any name to the courseInstuctor like i have given instuctor ,
+// you can use it to get value  =>   console.log(instructor);
+    //{ which property you want} and "course"=> from where
+  // you have to not write course.courseInstuctor to get the value
+  // that's why we use destructure method
+  // you have to write only courseInstructor to get value
+  console.log(courseInstructor);  //hitesh
