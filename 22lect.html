@@ -76,7 +76,7 @@
             // })
 
     // if you  click on any word then it should be diapear
-    document.querySelector('#num').addEventListener('click',function(e){
+       // document.querySelector('#num').addEventListener('click',function(e){
         // console.log(e);  // it give all event
         // console.log(e.target);   // it give    <li id="one">one</li>
 
@@ -89,8 +89,15 @@
                                                                     // // removeIt.remove();
                                                                     // removeIt.parentNode.removeChild(removeIt)
 
-                                                                    
-     })
+         //})
+
+         document.querySelector('#num').addEventListener('click',function(e){
+            if(e.target.tagName==='li'){
+                console.log(e.target.id);
+                let removeit=e.target.parentNode
+                removeit.remove()
+            }
+         })
 
 </script>
 
