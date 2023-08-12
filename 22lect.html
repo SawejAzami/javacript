@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> html events</title>
+    <style>
+        *{
+            color: white;
+            background-color: rgb(142, 144, 145);
+            font-size: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div id="num">
+        <ul >
+            <li id="one">one</li>
+            <li id="two">two</li>
+            <li id="three">three</li>
+            <li id="four">four</li>
+            <li id="google"><a href="http://google.com">Google</a></li>
+        </ul>
+    </div>
+
+<script>
+    // browser event 
+
+    // onclick
+    // document.getElementById('one').onclick=function(){
+    //     alert(" one")
+    // }
+    // onclick give less features and having propogation ability problem
+
+
+    // addEventListener()
+    // document.getElementById('one').addEventListener('click',function(){},false)
+    // here third parameter is false , it's default value is false therefore it not neccessory to write
+                // document.getElementById('one').addEventListener('click',function(){
+                //     alert('one')
+                // })
+    // it is best aproch
+
+    
+    // attachEvent()  it is not used in this time 
+
+
+    // event object   ->it lots of event
+            // document.getElementById('two').addEventListener('click',function(e){
+            // console.log(e);
+            // })
+    //type, timeStamp,PreventDeault(you can control the default behaviou), target , 
+    //toElement, srcelement, currentTarget, clientX,clientY,screenX,screenY
+    // altkey,ctrkey,shiftkey, keycode
+
+    // EventPropogation ->it has two context eventBubbling(it goes from down to up) and eventCapturing(it goes from up to down)
+    // any element tract the big element from inside to outside
+
+                // document.getElementById('num').addEventListener('click',function(e){
+                // console.log("click inside the ul");
+                // },false)// eventBubbling    , if we use true insted of false then it is   eventCapturing
+
+                // document.getElementById('two').addEventListener('click',function(e){
+                // console.log("two clicked");
+                // },false)
+    //    e.stopPropagation()  -> it stop the eventPropogation , it give the value of only that element where we click
+    //eventBubbling
+
+
+
+            // document.getElementById('google').addEventListener('click',function(e){
+            //     e.preventDefault();  // it stop the the google link
+            //     e.stopPropagation();
+            //     console.log("google clicked");
+            
+            // })
+
+    // if you  click on any word then it should be diapear
+    document.querySelector('#num').addEventListener('click',function(e){
+        // console.log(e);  // it give all event
+        // console.log(e.target);   // it give    <li id="one">one</li>
+
+        // if you want to get parent node  from target
+        // console.log(e.target.parentNode);
+
+        // to remove any element
+        // IT remove all if  we click on any element                 // console.log(e.target.parentNode);
+                                                                    // let removeIt=e.target.parentNode;
+                                                                    // // removeIt.remove();
+                                                                    // removeIt.parentNode.removeChild(removeIt)
+
+                                                                    
+     })
+
+</script>
+
+</body>
+</html>
