@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM | chai aur code</title>
+    <style>
+        *{
+            background-color: #212121;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="parent">
+        <div class="day">Moday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednessday</div>
+        <div class="day">Thursday</div>
+    </div>
+
+
+    <script>
+        const parent=document.querySelector('.parent')
+        // here you can access all the children of the parent
+        console.log(parent)
+        for(let i=0;i<parent.children.length;i++){
+            console.log(parent.children[i].innerHTML);
+        }
+
+        parent.children[1].style.color="orange"
+        // you can access first and last element
+        console.log(parent.firstElementChild);
+        console.log(parent.lastElementChild);
+
+        const day1=document.querySelector(".day")
+        console.log(day1);
+        // you can get parent access by children
+        console.log(day1.parentElement);
+        // you can get sibling of element
+        console.log(day1.nextElementSibling);
+        
+        //you can get nodes of the parent
+        console.log(parent.childNodes);
+       // NodeList(9) [text, div.day, text, div.day, text, div.day, text, div.day, text]
+        // it count each text and line
+
+        // ********* how to create element
+
+        const div=document.createElement('div')
+        console.log(div);
+        div.className="main"
+        div.id=Math.round((Math.random()*10+1))
+
+        div.setAttribute("title","title1")
+        div.style.backgroundColor="green"
+        div.style.padding="12px"
+        // div.innerText="chai aur code"// it over write the value
+        const addtext=document.createTextNode("chai aur code")
+        div.appendChild(addtext)
+        // attach to the body
+        document.body.appendChild(div)
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
