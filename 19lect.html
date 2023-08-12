@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">  
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+        *{
+            background-color: rgb(56, 56, 56);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1 id="title" class="heading">DOM learning on chai and code</h1>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi, nobis.</p>
+        <input type="text">
+        <ul>
+            <li class="list-item">one </li>
+            <li class="list-item">two</li>
+            <li class="list-item">three</li>
+        </ul>
+
+        <div>Lorem ipsum dolor sit amet <span> consectetur adipisicing el</span> it. Ipsam possimus <span> in libero </span> quam sint. Dolores commodi eos deleniti eum l <span>abore consectetur e</span> rror, magnam quasi dicta, aliquam quia cum, nulla nam optio provident perspiciatis <span> officia libero aut ra</span> tione maiores? Incidunt iure in neque laboriosam sed est quis soluta esse. Optio rem pariatur nulla quae cupiditate dolores, autem dolor, in <span>ventore impedit hic </span> exercitationem quisquam tempora amet saepe error eos eligendi dicta totam ducimus molestiae nisi eaque illum. Esse sed debitis, temporibus ullam distinctio ratione harum culpa id ex dolore quidem necessitatibus vero sapiente quae? Ab nulla rem ullam, iste voluptatibus doloribus cupiditate!</div>
+    </div>
+    
+
+    <script>
+        //************ to select any element by ->
+        // document.getElementById("title")    => then it will give <h1 id="title" class="heading">DOM learning on chai and code</h1>
+        // document.getElementsByClassName("heading")
+        // document.getElementsByTagName("h1")
+        // document.querySelector("#title") => for id
+        // document.querySelector(".heading") => for class
+        // document.querySelector("h1")  =>for tag
+        // document.querySelector("input[type='text']")  =>for tag and their attribute
+        
+
+        //****************** to get any attribute ->
+        // document.getElementById("title").id =>then it will give title
+        // document.getElementById("title").getAttribute("class") => it will give heading
+
+
+        //************** you can also set attribute
+        // document.getElementById("title").setAttribute("class","test") => it always overwrite , it will change class name from heading to test
+        // to set both attribute =>document.getElementById("title").setAttribute("class","test heading")
+
+        //************** we can declare a variable to do more changes->
+        //  const title=document.getElementById("title")
+        // title.style.backgroundColor="green"
+        // title.style.padding="15px"
+        // title.style.borderRadius="15px"
+
+        // *************** how to add content->
+        // title.textContent=> then we get ->DOM learning on chai and code -> it give whole text which are hide by  any style property 
+        
+        // title.innerText =>DOM learning on chai and code  -> it give actual text which are display
+
+        // title.innerHTML=> <h1 id="title" class="heading">DOM learning on chai and code</h1>
+        
+        //*************** we can use  querySelectorAll  ->
+        // const mytemp=document.querySelectorAll('li') // here we get nodelist -> using this we can use it as Array it is not actually array
+        // mytemp[0].style.color='green'
+        // mytemp.forEach(function(l){
+        //     l.style.backgroundColor="red"
+        // })
+
+       
+        // const mytemp=document.querySelectorAll('span')
+        // mytemp.forEach(function(l){
+        //     l.style.backgroundColor="red"
+        // })
+
+          
+       
+        // const newlist=document.getElementsByClassName('list-item')  // her we get all list item but if we want use listitem as array 
+        // //then we can not use it so to convert it into array by  // now we can use it as array
+        // const changes=Array.from(newlist)
+        // changes.forEach(function (li) {
+        //  li.style.color="green"
+        // })
+
+
+        
+      
+
+
+
+
+
+    </script>
+</body>
+</html>
